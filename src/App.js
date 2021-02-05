@@ -10,7 +10,7 @@ class App extends React.Component {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-           <code>문제선</code>의 리액트 공부페이지입니다!
+           <code>문제선</code>의 리액트 공부페이지입니다!!!!!!!!
         </p>
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           gazua
