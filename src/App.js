@@ -24,7 +24,7 @@ class App extends React.Component {
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           gazua
         </a>
-        <Nav sub={this.state.sub} url={this.state.href}></Nav>
+        <Nav title1="프롭스를 이용해보았습니다!" sub={this.state.sub} url={this.state.href}></Nav>
       </header>
     </div>
   );

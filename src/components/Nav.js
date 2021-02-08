@@ -15,7 +15,7 @@ class Nav extends React.Component{
         <nav>
           <ul>
             <li><a href={this.state.subject.href}>{this.state.subject.name}</a></li>
-            <li><a href="#">css</a></li>
+            <li><a href="#">{this.props.title1}</a></li>
             <li><a href="#">js</a></li>
             <li><a href={this.props.url}>{this.props.sub}</a></li>
           </ul>
