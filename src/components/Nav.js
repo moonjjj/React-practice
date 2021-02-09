@@ -24,7 +24,7 @@ class Nav extends React.Component{
             <li><a href="#">js</a></li>
             <li><a href={this.props.url}>{this.props.sub}</a></li>
             {lists}
-            <li><a href="#" onClick={function(){
+            <li><a href="#" onClick={function(e){
               console.log("온클릭 테스트합니다! react는 onClick이라고 적어줘야하구요");
               console.log("{}안에 값을 넣어야해요! 그리고 function 인자에 e를 받아서");
               console.log("preventDefault()메소드를 이용해서 원래 태그의 기본 이벤트를 저지 시켜줍니다");
