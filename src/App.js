@@ -14,7 +14,7 @@ class App extends React.Component {
       ,contents:[
         {id:1, list:'문제선 깃사이트',href:'https://github.com/moonjjj'},
         {id:2, list:'바닐라 먹킷리스트',href:'https://moonjjj.github.io/js_practice/'},
-        {id:3, list:'문제선 포토폴리오 ver.1.0.0',href:'https://moonjjj.github.io/project-solo/'}
+        {id:3, list:'문제선 포토폴리오 (ver.1.0.0)',href:'https://moonjjj.github.io/project-solo/'}
       ]
     }
   }
