@@ -69,11 +69,14 @@ class App extends React.Component {
           onChange={function(id){
             this.setState({mode:'read',selected_content_id:Number(id)});
           }.bind(this)}
-        />
+          />
+          {_article}
         <Control onChangeMode={function(_mode){
           this.setState({mode:_mode});
         }.bind(this)}></Control>
-        {_article}
+        <div>
+          <iframe width="907" height="510" src="https://www.youtube.com/embed/XMb0w3KMw00?list=PLuHgQVnccGMCRv6f8H9K5Xwsdyg4sFSdi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
       </header>
     </div>
   );
