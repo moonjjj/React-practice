@@ -18,7 +18,7 @@ class App extends React.Component {
     this.state={
       contents:[
         {id:1,title:"component의 개념 이해하기!",desc:"컴포넌트는 쉽게말해 html을 유지보수 및 직관성을 높이기 위해 사용하는 리액트의 기본개념입니다."},
-        {id:2,title:"props란?",desc:"props란 readonly"},
+        {id:2,title:"props란?",desc:"props란 readonly이고"},
         {id:3,title:"state란?",desc:"state는 내부의 값이라고 생각하시면됩니다."}
 
       ],
