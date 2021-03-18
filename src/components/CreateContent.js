@@ -4,7 +4,7 @@ class CreateContent extends React.Component{
     render(){
       return(
         <article>
-          <h2>Create</h2>
+          <p class="title">공부한 내용 작성하기</p>
           <form action="/create_process" method="post" 
             onSubmit={function(e){
               e.preventDefault();
@@ -14,14 +14,12 @@ class CreateContent extends React.Component{
               );
             }.bind(this)}
           >
+            <div class="input-div">
+                <input type="text" name="title" placeholder="제목 작성" required></input>
+                <input type="submit" class="submit-btn" value="✅"></input>
+            </div>
             <p>
-              <input type="text" name="title" placeholder="title"></input>
-            </p>
-            <p>
-              <textarea name="desc" placeholder="description"></textarea>
-            </p>
-            <p>
-              <input type="submit"></input>
+              <textarea name="desc" placeholder="공부한 내용 작성" required></textarea>
             </p>
           </form>
         </article>

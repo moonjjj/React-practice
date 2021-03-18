@@ -5,6 +5,7 @@ import Header from './components/Header.js';
 import ReadContent from './components/ReadContent.js';
 import CreateContent from './components/CreateContent.js';
 import Control from './components/Control.js';
+import Timer from './components/Timer.js';
 import './App.css';
 
 
@@ -17,12 +18,13 @@ class App extends React.Component {
     this.max_content_id=3;
     this.state={
       contents:[
-        {id:1,title:"component의 개념 이해하기!",desc:"컴포넌트는 쉽게말해 html을 유지보수 및 직관성을 높이기 위해 사용하는 리액트의 기본개념입니다."},
-        {id:2,title:"props란?",desc:"props란 readonly이고"},
-        {id:3,title:"state란?",desc:"state는 내부의 값이라고 생각하시면됩니다."}
+        {id:1,title:"React란?",desc:"React는 페이스북 재단에서 만든 SPA(Single Page Application)으로 각종 앱(페이스북, 인스타그램 등)에 사용됩니다."},
+        {id:2,title:"component란?",desc:"컴포넌트는 쉽게말해 html을 유지보수 및 직관성을 높이기 위해 사용하는 리액트의 기본개념으로서, 각 코드들을 컴포넌트화 시켜 따로따로 저장할 수 있습니다!"},
+        {id:3,title:"props란?",desc:"props란 웹을 이용하는 사람이 조정 할 수 있는 값으로, 이해를 돕기 쉽게 예를 들면 휴대폰의 볼륨버튼같은 존재입니다."},
+        {id:4,title:"state란?",desc:"state는 내부의 개발자가 설정해 놓은 값으로, 이해를 돕기 쉽게 예를 들면 휴대폰 내부의 시스템 같은 존재입니다."}
 
       ],
-      mode:"welcome",
+      mode:"create",
       subject:{title:'component',desc:"컴포넌트는 쉽게말해 html을 유지보수 및 직관성을 높이기 위해 사용하는 리액트의 기본개념입니다."},
       welcome:{title:'Welcome',desc:'Hello,React~'}
     }
@@ -58,25 +60,26 @@ class App extends React.Component {
 
   return (
     <div className="App">
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/XMb0w3KMw00?list=PLuHgQVnccGMCRv6f8H9K5Xwsdyg4sFSdi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
       <header className="App-header">
-        <Header title="안녕하세요!" subTitle="리액트 공부페이지입니다." 
+        <Header title="안녕하세요" subTitle="리액트 공부페이지입니다 💻"
         onChange={function(){
           this.setState({mode:"welcome"});
         }.bind(this)}
         >
         </Header>
+        {_article}
+      <Control onChangeMode={function(_mode){
+        this.setState({mode:_mode});
+      }.bind(this)}></Control>
         <Nav data={this.state.contents} 
           onChange={function(id){
             this.setState({mode:'read',selected_content_id:Number(id)});
           }.bind(this)}
           />
-          {_article}
-        <Control onChangeMode={function(_mode){
-          this.setState({mode:_mode});
-        }.bind(this)}></Control>
-        <div>
-          <iframe width="907" height="510" src="https://www.youtube.com/embed/XMb0w3KMw00?list=PLuHgQVnccGMCRv6f8H9K5Xwsdyg4sFSdi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+          <Timer/>
       </header>
     </div>
   );

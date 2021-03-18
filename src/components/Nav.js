@@ -7,7 +7,7 @@ class Nav extends React.Component{
       var lists =[];
       for(var i=0; i<data.length; i++){
         lists.push(
-        <li key={data[i].id}>
+        <li key={data[i].id} class="memo-li">
           <a href="#" data-id={data[i].id} onClick={function(e){
             e.preventDefault();
             this.props.onChange(e.target.dataset.id);
@@ -15,7 +15,7 @@ class Nav extends React.Component{
         </li>);
       }
       return(
-        <ul className="nav-ul">
+        <ul className="memo-ul">
           {lists}
         </ul>
       );

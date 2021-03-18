@@ -1,13 +1,16 @@
 import React, {Component} from 'react';
+import logo from '../logo.svg';
+
 
 class Header extends React.Component{
     render(){
       return(
-        <div>
-          <h1><a href="#" onClick={function(e){
+        <div class="greeting">
+          <img src={logo} className="App-logo" alt="logo" />
+          <span><a href="#" onClick={function(e){
             e.preventDefault();
             this.props.onChange();
-          }.bind(this)}>{this.props.title}</a></h1>
+          }.bind(this)}>{this.props.title}</a></span>
           <p>{this.props.subTitle}</p>
         </div>
       );
