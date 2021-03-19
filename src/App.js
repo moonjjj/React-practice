@@ -18,10 +18,9 @@ class App extends React.Component {
     this.max_content_id=3;
     this.state={
       contents:[
-        {id:1,title:"React란?",desc:"React는 페이스북 재단에서 만든 SPA(Single Page Application)으로 각종 앱(페이스북, 인스타그램 등)에 사용됩니다."},
-        {id:2,title:"component란?",desc:"컴포넌트는 쉽게말해 html을 유지보수 및 직관성을 높이기 위해 사용하는 리액트의 기본개념으로서, 각 코드들을 컴포넌트화 시켜 따로따로 저장할 수 있습니다!"},
-        {id:3,title:"props란?",desc:"props란 웹을 이용하는 사람이 조정 할 수 있는 값으로, 이해를 돕기 쉽게 예를 들면 휴대폰의 볼륨버튼같은 존재입니다."},
-        {id:4,title:"state란?",desc:"state는 내부의 개발자가 설정해 놓은 값으로, 이해를 돕기 쉽게 예를 들면 휴대폰 내부의 시스템 같은 존재입니다."}
+        {id:1,title:"component란?",desc:"컴포넌트는 쉽게말해 html을 유지보수 및 직관성을 높이기 위해 사용하는 리액트의 기본개념으로서, 각 코드들을 컴포넌트화 시켜 따로따로 저장할 수 있습니다!"},
+        {id:2,title:"props란?",desc:"props란 웹을 이용하는 사람이 조정 할 수 있는 값으로, 이해를 돕기 쉽게 예를 들면 휴대폰의 볼륨버튼같은 존재입니다."},
+        {id:3,title:"state란?",desc:"state는 내부의 개발자가 설정해 놓은 값으로, 이해를 돕기 쉽게 예를 들면 휴대폰 내부의 시스템 같은 존재입니다."}
 
       ],
       mode:"create",
